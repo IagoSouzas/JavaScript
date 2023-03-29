@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="js.css">
+    <title>Hora de codar</title>
+</head>
+
+<script>
+    //3.Considerando a figura acima, escreva um programa para cada forma que calcule e exiba em tela cada uma de suas respectivas áreas. O usuário irá informar os valores de cada variável.
+    var base = parseInt(prompt("Digite o valor da base do Retângulo:"));
+    var altura = parseInt(prompt("Digite o valor da altura do Retângulo:"));
+    var Resultado = base * altura;
+
+    document.write("Valor do Retângulo é " + Resultado + "<br>");
+
+    var lado = parseInt(prompt("Digite o valor do lado que você deseja elevar a 2:"));
+
+    var Resultado = lado * lado;
+
+    document.write(" Valor do quadrado: " + Resultado + "<br>");
+
+    var diagonal_maior = parseInt(prompt("Digite o valor da diagonal maior do Losango:"));
+    var diagonal_menor = parseInt(prompt("Digite o valor da diagonal menor do Losango:"));
+    var Resultado = diagonal_maior * diagonal_menor / 2;
+
+    document.write("Valor do Losango:" + Resultado + "<br>")
+
+    var base_maior = parseInt(prompt("Digite o valor da base maior do trapézio:"));
+    var base_menor = parseInt(prompt("Digite o valor da base menor do trapézio:"));
+    var h = parseInt(prompt("Digite o valor de h do trapézio:"));
+    var Resultado = (base_maior + base_menor) * h / 2;
+
+    document.write("O valor do Trapézio é " + Resultado + ("<br>"))
+
+    var base_p = parseInt(prompt("Digite o valor da base do Paralelograma:"));
+    var altura_p = parseInt(prompt("Digite o valor da altura do Paralelograma:"));
+    var Resultado = base_p * altura_p;
+
+    document.write("O valor do Paralelograma é " + Resultado + "<br>");
+
+    var base_t = parseInt(prompt("Digite o valor da base do Triangulo:"));
+    var altura_t = parseInt(prompt("Digite o valor da altura do Triângulo:"));
+    var Resultado = base_t * altura_t / 2;
+
+    document.write("O valor do Triângulo é " + Resultado + "<br>");
+
+    var PI = parseInt(prompt("Digite o valor de PI:"))
+    var R = parseInt(prompt("Digite o valor de Raio:"))
+    var Resultado = PI * R * 2
+
+    document.write("O valor do circulo é " + Resultado + "<br>")
+</script>
+
+<body>
+
+</body>
+</html>

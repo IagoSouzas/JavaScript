@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="js.css">
+    <title>Hora de codar 3</title>
+</head>
+
+<script>
+    //2 - Crie uma bomba relógio (usando somente código - para deixar claro!) cuja contagem regressiva vá de 30 a 0. Utilize "document.write" para escrever em tela e no final da repetição escreva "EXPLOSÃO".
+
+    //Definindo as var
+    var inicio = 30;
+    var limite = -1;
+
+    //utilizando o comando (do) para fazer uma contagem regressiva
+    do {
+        document.write("Tempo Restante: " + inicio + "<br>");
+        inicio--;
+    } while (inicio > limite);
+
+    document.write("EXPLOSÃO" + "<br>")
+</script>
+
+<body>
+    <br>
+    <br>
+    <a href="menu.html">
+        <button>
+            BACK
+        </button>
+    </a>
+</body>
+
+</html>

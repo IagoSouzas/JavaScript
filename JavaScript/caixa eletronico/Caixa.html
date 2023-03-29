@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa Eletronico</title>
+</head>
+
+<script>
+    let saldo = 100.5; //Float
+    let senha = 3589
+    let nome = prompt("Olá, Seja Bem-Vindo. Por favor digite seu nome :");
+    alert("Olá " + nome + " é um prazer ter você por aqui!");
+
+    function inicio() {
+
+        var escolha = parseInt(prompt('Selecione uma opção: \n - 1 Saldo \n - 2 Depósito \n - 3 Saque \n - 4 Transferência \n - 5 Extrato \n - 6 Sair'));
+
+        switch (escolha) {
+            case 1:
+                ver_saldo();
+                break;
+            case 2:
+                fazer_deposito();
+                break;
+            case 3:
+                fazer_saque();
+                break;
+            case 4:
+                transferencia();
+            case 5:
+                extrato();
+            case 6:
+                sair();
+                break;
+            case 7:
+                erro();
+                break;
+        }
+
+        function ver_saldo() {
+            if (senha == prompt("Insira sua senha: ")) {
+                alert('Seu saldo atuel é: ' + saldo);
+
+                inicio()
+            } else {
+                alert('Senha incorreta!')
+                ver_saldo();
+            }
+        }
+
+        function fazer_deposito() {
+            if (senha == prompt("Insira sua senha: ")) {
+
+
+                var deposito = parseFloat(prompt('Qual valor para depósito?'));
+                if (isNaN(deposito) || deposito === '' || deposito <= 0) {
+                    alert('Operação não autorizada');
+                    fazer_deposito();
+                } else {
+                    saldo += deposito;
+
+                    ver_saldo();
+                }
+            } else {
+                alert('Senha incorreta!')
+
+                fazer_deposito();
+            }
+        }
+
+        function fazer_saque() {
+            if (senha == prompt("Insira sua senha: ")) {
+
+
+                var saque = parseFloat(prompt('Qual o valor para saque?'));
+                if (isNaN(saque) || saque === '' || saque <= 0 || saque > saldo) {
+                    alert('Operação não autorizada');
+                    fazer_saque();
+                }
+                else {
+                    saldo -= saque;
+
+                    ver_saldo();
+                }
+            } else {
+                alert('Senha incorreta!')
+                fazer_saque();
+            }
+        }
+
+        function extrato() {
+            if (senha == prompt("Insira sua senha: ")) {
+                alert("Data: 19/01/2023 \n\n - Computador Gamer 4.000,00 \n - Monitor-SuperFrame 1.000,00 \n - Headset-SuperFrame 290,00  \n\n Subtotal: 5.290,00 ")
+
+                inicio();
+            } else {
+                alert('Senha incorreta!')
+                extrato
+            }
+        }
+
+        function transferencia() {
+            if (senha == prompt("Insira sua senha: ")) {
+
+
+                let trans = parseFloat(prompt("Insira o número da conta de transferência"))
+
+                switch (isNaN(trans) || trans === '' || trans < 0) {
+                    case true:
+                        alert("Operação não autorizada");
+                        transferencia();
+                        break;
+                    case false:
+                        let trasnfer = parseFloat(prompt("Insira o valor desejado para tranferência"));
+                        switch (isNaN(trasnfer) || trasnfer === '' || trasnfer <= 0 || trasnfer > saldo) {
+                            case true:
+                                alert('Operação não autorizada')
+                                transferencia();
+                                break;
+                            case false:
+                                if (senha == prompt("Insira sua senha: ")) {
+                                    saldo -= trasnfer
+                                    alert('Seu saldo atual é: ' + saldo);
+                                    inicio()
+                                } else {
+                                    alert('Senha incorreta!')
+                                    transferencia()
+                                }
+                                break;
+                        }
+                }
+            } else {
+                alert('Senha incorreta!')
+                transferencia();
+            }
+            
+        }
+
+        function erro() {
+            alert('Por favor, informe um número entre 1 e 6');
+            inicio();
+        }
+
+        function sair() {
+            var confirma = confirm('Você deseja sair?');
+            if (confirma) {
+                window.close();
+            } else {
+                inicio();
+            }
+        }
+
+    }
+    inicio()
+</script>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.principal{
+    background-image: url(image/code.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 97vw;
+    height: 45.9vh;
+}
+
+.atvd {
+    width: 160px;
+    height: 200px;
+    background-color: rgb(23, 83, 94);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.atvd:hover {
+    transition: all 1s;
+    box-shadow: 0px 0px 30px 1px rgb(174, 81, 218);
+}
+
+p{
+    color: white;
+}
+
+button{
+    width: 70px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 60px;
+    background-color: aquamarine;
+}

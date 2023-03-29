@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="js.css">
+    <title>Hora de codar 3</title>
+</head>
+
+<script>
+    //7 - Escreva um algoritmo para ler as notas de avaliações de um aluno, calcule e imprima a média (simples) desse aluno. Só devem ser aceitos valores válidos durante a leitura (0 a 10) para cada nota. São 6 notas ao total. Caso o valor informado para qualquer uma das notas esteja fora do limite estabelecido, deve ser solicitado um novo valor ao usuário. 
+
+    //inicio da função
+    function inicio() {
+        //var para armazenar as notas informado pelo user.
+        var notas = [];
+
+        //criei um laço de loop, porém determinei quando chegar na sexta nota ele ira parar.
+        for (var alunos = 1; alunos <= 6; alunos++) {
+            //let para o user interagir e colocar as notas.
+            let nota = parseFloat(prompt(`Digite a ${alunos} ª nota (0 a 10):`)); //aqui usei o comando de interpolar variáveis e expressões em strings. em resumo ela vai substituir as variaveis na string.
+
+            //usando o comando while caso o user não colocar as informações corretamente, vai pedir novamente para ele colocar da forma correta.
+            while (isNaN(nota) || nota < 0 || nota > 10) {
+                nota = parseFloat(prompt(`Valor inválido. Digite novamente a ${alunos}ª nota (0 a 10):`));
+            }
+
+            //usando o push, para puxar as notas, de uma var para a principal que vai armazenar.
+            notas.push(nota)
+        }
+
+        // vamos usar o comando (reduce) que vai fazer a soma com todos os numero que estiver na array nota, e depois vai ser dividido usando a length.
+        var media = notas.reduce((calcule, nota) => calcule + nota) / notas.length;
+
+        //vai mostrar a media para o user.
+
+
+        alert('A média das notas é: ' + media)
+        retorno()
+
+        //vai fazer o user escolher se vai fazer o uso do programa novamente, ou não
+        function  retorno(){
+            var escolha = prompt("Calcular a média de outro aluno S / N?")
+
+            if (escolha === "S") {
+                inicio();
+            }
+            else if (escolha === "N") {
+                alert('Sistema encerrado')
+            }
+
+        }
+
+
+    }
+    inicio()
+
+</script>
+
+<body>
+    <br>
+    <br>
+    <a href="menu.html">
+        <button>
+            BACK
+        </button>
+    </a>
+
+    <a href="atvd7.html">
+        <button>
+            RESET
+        </button>
+    </a>
+</body>
+
+</html>

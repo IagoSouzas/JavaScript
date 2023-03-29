@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="js.css">
+    <title>Hora de Codar 3</title>
+</head>
+
+<Script>
+
+    //8 - Ler um valor N e imprimir todos os valores inteiros entre 1 (inclusive) e N (inclusive). Considere que o N será sempre maior que ZERO. N  é um valor informado pelo usuário
+    function inicio() {
+
+        //Var criada para intereção com o user.
+       var N = parseInt(prompt("Digite um valor: "));
+
+       //Vai usar o que foi pedido pelo user.
+        if (N > 0) {
+            for (let i = 1; i <= N; i++) {
+                document.write(i + "<br>");
+            }
+        }
+        else if (N <= 0) {
+            while (isNaN(N) || N <= 0) {
+                N = parseInt(prompt("Valor inválido. Digite novamente um valor maior que 0: "));
+                for (let i = 1; i <= N; i++) {
+                    document.write(i + "<br>");
+                }
+            }
+        }
+
+
+    }
+    inicio()
+
+   
+</Script>
+
+<body>
+    <br>
+    <br>
+    <a href="menu.html">
+        <button>
+            BACK
+        </button>
+    </a>
+
+    <a href="atvd8.html">
+        <button>
+            RESET
+        </button>
+    </a>
+
+</body>
+
+</html>

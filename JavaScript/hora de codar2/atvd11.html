@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="js.css">
+    <title>Hora de codar 2</title>
+</head>
+
+<script>
+    //11. Uma micro calculadora Escreva um programa para ler 2 valores inteiros informados pelo usuário e uma das seguintes operações a serem executadas (codificada da seguinte forma: 1.Adição, 2.Subtração, 3.Divisão, 4.Multiplicação). O programa deve calcular e escrever o resultado dessa operação sobre os dois valores lidos. Observação: Considere que só serão lidos os valores 1, 2, 3 ou 4 para as operações
+
+    //escolher a função
+    var escolha = parseInt(prompt("Escolha uma opção 1.) Adição 2.) Subtração 3.) Divisão 4.) Multiplicação"));
+    var num1 =  parseInt(prompt("Digite o primeiro número:"))
+    var num2 = parseInt(prompt("Digite o segundo número:"))
+
+    //funções que vão ser declaradas pelo user
+    if (escolha === 1) {
+        soma();
+    }
+    else if (escolha === 2) {
+        sub();
+    }
+    else if (escolha === 3) {
+        div()
+    }
+    else if (escolha === 4) {
+        mult();
+    }
+
+
+    function soma() {
+        soma = num1 + num2
+        document.write("O resultado da Adição é " + soma)
+    }
+
+    function sub() {
+        sub = num1 - num2
+        document.write("O resultado da Subtração é " + sub)
+    }
+
+    function div() {
+        div = num1 / num2
+        document.write("O resultado da Divisão é " + div)
+    }
+
+    function mult(){
+        mult = num1 * num2
+        document.write("O resultado da Multiplicação é " + mult)
+    }
+
+</script>
+
+<body>
+    <br>
+
+    <a href="atvd2.html">
+        <button>
+            Reset
+        </button>
+    </a>
+</body>
+
+</html>

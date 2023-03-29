@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="js.css">
+    <title>Hora de codar 3</title>
+</head>
+
+<script>
+    //1 - Escreva um algoritmo para ler 2 valores informados pelo usuário e se o segundo valor informado for igual ou menor que ZERO, deve ser lido um novo valor. Ou seja, para o segundo valor não pode ser aceito o valor zero, nem um valor negativo.  O seu programa deve imprimir o resultado da divisão do primeiro valor lido pelo segundo valor.
+
+    //Os valores que irei utilizar
+    var A = parseInt(prompt("Primeiro Valor"));
+    var B = parseInt(prompt("Segundo Valor"));
+
+    //Vou estar utilizando o comando while para caso o numero seja zero ou negativo.
+    while (B <= 0) {
+        B = parseInt(prompt("Indique o segundo valor, novamente"));
+    }
+
+    //Exbindo para o user.
+    document.write( "O resultado é: " + A/B + "<br>")
+
+</script>
+
+<body>
+    <br>
+    <br>
+    <a href="menu.html">
+        <button>
+            BACK
+        </button>
+    </a>
+
+    <a href="atvd1.html">
+        <button>
+            RESET
+        </button>
+    </a>
+
+</body>
+
+</html>

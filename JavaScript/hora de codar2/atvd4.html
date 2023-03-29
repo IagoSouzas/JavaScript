@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="js.css">
+    <title>Hora de codar 2</title>
+</head>
+
+<script>
+    //4.Faça um programa que leia 3 valores informados pelo usuário (considere que não serão informados valores iguais) e escrever a soma dos 2 maiores.
+
+    var num_1 = parseInt(prompt("valor 1:"));
+    var num_2 = parseInt(prompt("valor 2:"));
+    var num_3 = parseInt(prompt("valor 3:"));
+
+    //encontrar os dois valores 
+
+    if (num_1 < num_2 && num_1 < num_3) {
+        document.write("A soma dos dois maiores valores é: ", num_2 + num_3)
+        
+    }
+   else if  (num_2 < num_1 && num_2 < num_3) {
+        document.write("A soma dos dois maiores valores é: ", num_1 + num_3)
+    }
+
+    else if  (num_3 < num_1 && num_3 < num_2) {
+        document.write("A soma dos dois maiores valores é: ", num_1 + num_2)
+    }
+
+</script>
+
+<body>
+    <br>
+
+    <a href="atvd5.html">
+        <button>
+            Próxima atividade
+        </button>
+    </a>
+
+</body>
+
+</html>

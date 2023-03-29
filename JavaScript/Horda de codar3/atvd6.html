@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="js.css">
+    <title>Hora de codar 3</title>
+</head>
+
+<script>
+    //6 - Escreva um programa para ler 2 notas de um aluno, calcular e imprimir a média final. Considere que a nota de aprovação é 9,5. Logo após escrever a mensagem "Calcular a média de outro aluno Sim/Não?" e solicitar um resposta. Se a resposta for "S", o programa deve ser executado novamente, caso contrário deve ser encerrado exibindo a quantidade de alunos aprovados.
+
+    //definindo o numero de aprovados
+    var aprovados = 0;
+
+    //usando o function para dar inicio a função
+    function inicio() {
+
+        //criando as variaveis para a função ter uma interação.
+        var N1 = parseFloat(prompt("Digite o valor da primeira nota: "));
+        var N2 = parseFloat(prompt("Digite o valor da segunda nota: "));
+        var media = (N1 + N2) / 2;
+
+        //if para caso a media seja maior que o valor informado.
+        if (media >= 9.5) {
+
+            alert("A media final do aluno é :" + media + " Aprovado")
+            aprovados = aprovados + 1;
+            volta()
+        }
+
+        //else if para caso a media seja menor que o valor informado.
+        else if (media < 9.5) {
+            alert("A media final do aluno é :" + media + " Reprovado")
+            volta()
+        }
+
+        //criando uma função para inicializar novamente o programa, e para não reiniciar o numero de aprovados
+        function volta() {
+            //Var para ele escolher se vai utilizar ou não novamente o programa.
+            var escolha = prompt("Calcular a média de outro aluno S / N?")
+
+            if (escolha === "S") {
+                inicio();
+            }
+
+            //caso ele não utilize novamente o programa, ira aparecer o numero de alunos aprovados
+            else if (escolha === "N") {
+                alert('A quantidade de alunos aprovados são: ' + aprovados)
+            }
+
+        }
+    }
+    inicio()
+
+</script>
+
+<body>
+    <br>
+    <br>
+    <a href="menu.html">
+        <button>
+            BACK
+        </button>
+    </a>
+
+    <a href="atvd6.html">
+        <button>
+            RESET
+        </button>
+    </a>
+</body>
+
+</html>

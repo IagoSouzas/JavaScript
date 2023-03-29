@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="js.css">
+    <title>Hora de codar 3</title>
+</head>
+
+<script>
+
+    //5 - Faça um algoritmo que calcule e escreva a média aritmética dos dois números inteiros informados pelo usuário e todos os números inteiros entre eles. Considere que o primeiro sempre será menor que o segundo.
+
+    //Os valores que irei utilizar
+    var N1 = parseInt(prompt("Primeiro Valor"));
+    var N2 = parseInt(prompt("Segundo Valor"));
+
+    var soma = 0;
+    var ari = 0;
+
+    //Vou estar utilizando o comando while para caso o user informe o primeiro numero maior q o segundo
+    while (N1 > N2) {
+        N2 = parseInt(prompt("Digite o segundo valor maior que o primeiro: "));
+    }
+
+    //Vou utilizar o (for) usando colocando a inicialização Var, a logica Inicio e depois o incremento Inicio++
+    for (var inicio = N1; inicio <= N2; inicio++) {
+        soma += inicio;
+        ari++;
+    }
+
+    //por fim fazer o calculo aritimetico
+    document.write("O resultado é: " + soma / ari)
+
+</script>
+
+<body>
+    <br>
+    <br>
+    <a href="menu.html">
+        <button>
+            BACK
+        </button>
+    </a>
+
+    <a href="atvd5.html">
+        <button>
+            RESET
+        </button>
+    </a>
+</body>
+
+</html>

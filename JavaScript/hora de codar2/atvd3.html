@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="js.css">
+    <title>Hora de codar 2</title>
+</head>
+
+<script>
+    //3. Faça um programa para ler 3 valores (considere que não serão informados valores iguais) e escrever o maior deles.
+
+    var n1 = parseInt(prompt("Indique primeiro valor:"))
+    var n2 = parseInt(prompt("Indique segundo valor:"))
+    var n3 = parseInt(prompt("Indique terceiro valor:"))
+
+    if (n1 > n2 && n1 > n3) {
+        document.write("O primeiro valor é o maior.")
+    }
+    else if (n2 > n1 && n2 > n3) {
+        document.write("O segundo valor é o maior.")
+    }
+    else if (n3 > n1 && n3 > n2) {
+        document.write("O terceiro valor é o maior.")
+    }
+    else if (n1 == n2 == n3 == 0) {
+        document.write("ERRO")
+    }
+
+</script>
+
+<body>
+    <br>
+
+    <a href="atvd4.html">
+        <button>
+            Próxima atividade
+        </button>
+    </a>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="js.css">
+    <title>Hora de Codar 3</title>
+</head>
+
+    <script>
+        //10 - Escreva um programa para imprimir todas as tabuadas de 1 a N. N será informado pelo usuário.
+        
+       //criei uma constante para que o user determinasse aquilo que seria feito.
+        const mult = parseInt(prompt("Insira o número de multiplicação: "))
+        
+        //aqui utilizando os comandos (for;let) criei uma laço de repetição para que fosse informado quais numeros da tabuada seria feito.
+       for(let num = 1; num <= mult; num++){
+        document.write(`tabuada do ${num}`);
+
+        //aqui utilizando também os comandos (for;let), criei um laço de repetição para que fossem feitas as tabuada do 1 até a do 10, que é o comum.
+        for(let tabu = 1; tabu <= 10; tabu++){
+            document.write(` | ( ${num} x ${tabu} = ${num*tabu})`);
+        }
+        document.write("<br><br>");
+       }
+    </script>
+
+<body>
+    <br>
+    <br>
+    <a href="menu.html">
+        <button>
+            BACK
+        </button>
+    </a>
+
+    <a href="atvd10.html">
+        <button>
+            RESET
+        </button>
+    </a>
+</body>
+</html>

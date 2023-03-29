@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="js.css">
+    <title>Hora de codar 2</title>
+</head>
+
+<script>
+    //8. Escreva um programa que calcule a média de quatro números informados pelo usuário, mas somente se esses números forem maiores que 0 e menores que 10. No final, se a média for maior que cinco o usuário receberá uma mensagem "Você passou no teste". Em qualquer outra situação, ele receberá uma mensagem de "tente novamente"
+
+    var n1 = parseFloat(prompt("Informe o primeiro valor:"))
+    var n2 = parseFloat(prompt("Informe o segundo valor:"))
+    var n3 = parseFloat(prompt("Informe o terceiro valor:"))
+    var n4 = parseFloat(prompt("Informe o quarto valor:"))
+
+    var resul = (n1 + n2 + n3 + n4) / 4;
+
+    if (n1 > 0 && n1 < 11) {
+        document.write("Primeira nota: " + n1 + "<br>")
+    }
+
+    if (n2 > 0 && n2 < 11) {
+        document.write("Segundo nota: " + n2 + "<br>")
+    }
+
+    if (n3 > 0 && n3 < 11) {
+        document.write("Terceiro nota: " + n3 + "<br>")
+    }
+
+    if (n4 > 0 && n4 < 11) {
+        document.write("Quarta nota: " + n4 + "<br>")
+    }
+
+    if (resul > 5) {
+        document.write(" Nota final: " + resul + " (Aprovado)")
+    }
+    else if (resul < 5) {
+        document.write(" Nota final: " + resul + " (Tente Novamente)")
+    } 
+</script>
+
+<body>
+    <br>
+
+    <a href="atvd9.html">
+        <button>
+            Próxima atividade
+        </button>
+    </a>
+
+</body>
+
+</html>
